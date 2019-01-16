@@ -3,12 +3,12 @@
   
 Summary:	Python library for getting information about Linux distros
 Name:		python-distro
-Version:	1.2.0
-Release:	3
+Version:	1.3.0
+Release:	1
 Group:		Development/Python
 License:	Python
 Url:		https://pypi.python.org/pypi/distro
-Source0:	https://github.com/nir0s/distro/archive/v%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/d/distro/distro-%{version}.tar.gz
 BuildArch:	noarch 
 BuildRequires:	python-setuptools
 BuildRequires:	pkgconfig(python3)
@@ -21,7 +21,6 @@ platform.linux_distribution()
 %setup -qn %{module}-%{version}
   
 %install 
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
+PYTHONDONTWRITEBYTECODE= %__%py_install --record=FILE_LIST
 
 %files -f FILE_LIST
-
