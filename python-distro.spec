@@ -4,7 +4,7 @@
 Summary:	Python library for getting information about Linux distros
 Name:		python-distro
 Version:	1.4.0
-Release:	3
+Release:	4
 Group:		Development/Python
 License:	Python
 Url:		https://pypi.python.org/pypi/distro
