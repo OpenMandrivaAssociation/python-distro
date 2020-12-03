@@ -34,4 +34,4 @@ rm -rf %{module}.egg-info
 %license LICENSE
 %{python_sitelib}/%{module}-*.egg-info/
 %{python_sitelib}/%{module}.py
-%{python_sitelib}/__pycache__/%{module}.*
+#{python_sitelib}/__pycache__/%{module}.*
