@@ -31,6 +31,7 @@ rm -rf %{module}.egg-info
 
 %files
 %doc *.md
+%{_bindir}/distro
 %license LICENSE
 %{python_sitelib}/%{module}-*.egg-info/
 %{python_sitelib}/%{module}.py
