@@ -4,7 +4,7 @@
 Summary:	Python library for getting information about Linux distros
 Name:		python-distro
 Version:	1.5.0
-Release:	2
+Release:	3
 Group:		Development/Python
 License:	Python
 Url:		https://pypi.python.org/pypi/distro
@@ -20,8 +20,18 @@ platform.linux_distribution()
 %prep
 %setup -qn %{module}-%{version}
   
-%install 
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
+# Remove bundled egg-info
+rm -rf %{module}.egg-info
 
-%files -f FILE_LIST
+%build
+%py_build
 
+%install
+%py_install
+
+%files
+%doc *.md
+%license LICENSE
+%{python_sitelib}/%{module}-*.egg-info/
+%{python_sitelib}/%{module}.py
+%{python_sitelib}/__pycache__/%{module}.*
