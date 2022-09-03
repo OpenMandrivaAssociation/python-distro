@@ -3,7 +3,7 @@
   
 Summary:	Python library for getting information about Linux distros
 Name:		python-distro
-Version:	1.6.0
+Version:	1.7.0
 Release:	1
 Group:		Development/Python
 License:	Python
@@ -34,5 +34,4 @@ rm -rf %{module}.egg-info
 %{_bindir}/distro
 %license LICENSE
 %{python_sitelib}/%{module}-*.egg-info/
-%{python_sitelib}/%{module}.py
-#{python_sitelib}/__pycache__/%{module}.*
+%{python_sitelib}/%{module}
