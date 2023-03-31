@@ -4,7 +4,7 @@
 Summary:	Python library for getting information about Linux distros
 Name:		python-distro
 Version:	1.7.0
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	Python
 Url:		https://github.com/nir0s/distro
