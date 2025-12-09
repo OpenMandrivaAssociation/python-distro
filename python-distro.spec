@@ -21,5 +21,5 @@ platform.linux_distribution()
 %doc *.md
 %{_bindir}/distro
 %license LICENSE
-%{python_sitelib}/%{module}-*.egg-info/
+%{python_sitelib}/%{module}-*.dist-info/
 %{python_sitelib}/%{module}
