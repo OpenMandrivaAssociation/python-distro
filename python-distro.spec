@@ -3,31 +3,19 @@
   
 Summary:	Python library for getting information about Linux distros
 Name:		python-distro
-Version:	1.7.0
-Release:	2
+Version:	1.9.0
+Release:	1
 Group:		Development/Python
 License:	Python
 Url:		https://github.com/nir0s/distro
 Source0:	https://files.pythonhosted.org/packages/source/d/%{module}/%{module}-%{version}.tar.gz
 BuildArch:	noarch 
-BuildRequires:	python-setuptools
-BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildSystem:	python
  
 %description 
 A much more elaborate, renewed alternative implementation for Python's
 platform.linux_distribution()
-
-%prep
-%setup -qn %{module}-%{version}
-  
-# Remove bundled egg-info
-rm -rf %{module}.egg-info
-
-%build
-%py_build
-
-%install
-%py_install
 
 %files
 %doc *.md
